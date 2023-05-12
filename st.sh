@@ -3,7 +3,8 @@ sleep 5
 echo start app
 python3 app.py
 python3 test.py
+APP_CODE=$?
 sleep 5
 echo $APP_PID
 kill -TERM $APP_PID
-exit 0
+exit $APP_CODE
