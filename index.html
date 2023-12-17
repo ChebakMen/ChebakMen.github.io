@@ -15,7 +15,7 @@
 
 <body>
   <header class="page-header">
-    <div class="page-header__conteiner">
+    <div class="page-header__container">
       <a href="index.html" class="page-header__logo">
         <svg class="page-header__logo-img" wight="202" height="147">
           <use xlink:href="assets/icons/symbols.svg#logo"></use>
@@ -64,16 +64,267 @@
 
 
       <section class="offers home__offers"></section>
-      <section class="about home__about"></section>
+      <section class="about home__about">
+        <div class="about__container">
+          <h2 class="about__section-title section-title">
+            О нас
+          </h2>
+
+          <div class="about__block">
+            <h3 class="about__title">
+              Проект «Millennials»
+            </h3>
+
+            <p class="about__text">
+              Вдохновлен молодыми идейными людьми, увлеченными творчеством, эмоциями и желанием сделать мир лучше, проявить себя. У них есть талант и стремление, у нас возможность помочь им воплотить их мечту в реальность.
+            </p>
+
+          </div>
+
+          <div class="about__block2">
+            <picture class="about__picture">
+              <img class="about__img" src="assets/images/pic.jpg">
+            </picture>
+
+            <picture class="about__picture2">
+              <img class="about__img" src="assets/images/pic_2.jpg">
+            </picture>
+
+            <h3 class="about__title about__title--w868 about__title--2">
+              Мы предоставляем площади для вашего мероприятия
+            </h3>
+
+            <p class="about__text about__text--2">
+              И оказываем помощь с организацией, если вам это нужно. Наша цель: вовлечь в культурную жизнь города как можно больше людей, помочь молодым ребятам сделать первые шаги к своей мечте и рассказать всем о том, что их волнует.
+
+            </p>
+
+
+          </div>
+
+          <div class="about__block3">
+            <picture class="about__picture3">
+              <img class="about__img2" src="assets/images/pic_3.jpg">
+            </picture>
+            <div class="about__block3--wrapper">
+              <p class="about__text about__text--mb90">
+                Мы уже успешно организовали и провели более 100 проектов. Посмотрите, как это было классно.
+              </p>
+
+              <a href="#" class="about__link link">
+                <span class="link__name">
+                  Смотреть
+                </span>
+
+                <svg class="link__icon" width="91" height="60">
+                  <use xlink:href="assets/icons/symbols.svg#link">
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="upcoming home__upcoming"></section>
       <section class="listing home__listing"></section>
-      <section class="contacts home__contacts"></section>
+      <section class="contacts home__contacts">
+        <div class="contacts__container">
+          <h2 class="contacts__title section-title">Контакты</h2>
+          <div class="contacts__wrapper">
+            <div class="contacts__items">
+              <!-- иконка 1 -->
+              <div class="contacts__item">
+                <div class="contacts-item__img">
+                  <svg class="contacts-item__icon" width="24" height="24">
+                    <use xlink:href="assets/icons/symbols.svg#location">
+                  </svg>
+                </div>
+                <div class="contacts-item__content">
+                  <h4 class="contacts-item__title">Томск, Белая 8</h4>
+                  <p class="contacts-item__info">2 этаж</p>
+                  <p class="contacts-item__info">оф. 207-208</p>
+                </div>
+              </div>
+              <!-- иконка 2 -->
+              <div class="contacts__item">
+                <div class="contacts-item__img">
+                  <svg class="contacts-item__icon" width="24" height="24">
+                    <use xlink:href="assets/icons/symbols.svg#home">
+                  </svg>
+                </div>
+                <div class="contacts-item__content">
+                  <h4 class="contacts-item__title">Отдел аренды</h4>
+                  <a href="tel: 74993500730" class="contacts-item__info">+7 499 350 0730</a>
+                  <a href="mailto:hi@tagree.ru" class="contacts-item__info">hi@tagree.ru</a>
+                </div>
+              </div>
+              <!-- иконка 3 -->
+              <div class="contacts__item">
+                <div class="contacts-item__img">
+                  <svg class="contacts-item__icon" width="24" height="24">
+                    <use xlink:href="assets/icons/symbols.svg#star">
+                  </svg>
+                </div>
+                <div class="contacts-item__content">
+                  <h4 class="contacts-item__title">Отдел мероприятий</h4>
+                  <a href="tel: 74993500730" class="contacts-item__info">+7 499 350 0730</a>
+                  <a href="mailto: hi@tagree.ru" class="contacts-item__info">hi@tagree.ru</a>
+                </div>
+              </div>
+            </div>
+            <!-- карта -->
+            <div class="contacts__map">
+              <img src="assets/images/map.jpg" alt="map">
+            </div>
+          </div>
+
+
+        </div>
+      </section>
 
       <div class="doit home__doit"></div>
     </div>
   </main>
 
   <footer class="page-footer"></footer>
+
+  <div class="pp">
+    <div class="pp__container">
+      <div class="pp__sticky-close">
+        <button type="button" class="pp__sticky-btn">
+          <svg class="pp__btn-icon" width="24" height="24">
+            <use xlink:href="assets/icons/symbols.svg#x"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="pp__wrapper">
+        <h3 class="pp__title">
+          Заполните форму
+          <br /> и мы подберем площадку
+        </h3>
+        <div class="pp__form form">
+          <div class="form__list">
+            <div class="form__field form__field--w50 field">
+              <h6 class="field__title">
+                Формат мероприятия:
+              </h6>
+              <div class="field__radio radio">
+                <label class="radio__label">
+                  <input type="radio" name="format" value="seminar" class="radio__input" checked />
+                  <span class="radio__mark"></span>
+                  <span class="radio__name">Мастер-класс/семинар</span>
+
+                </label>
+
+                <label class="radio__label">
+                  <input type="radio" name="format" value="concert" class="radio__input" />
+                  <span class="radio__mark"></span>
+                  <span class="radio__name">Концерт/выступление</span>
+
+                </label>
+
+                <label class="radio__label">
+                  <input type="radio" name="format" value="show" class="radio__input" />
+                  <span class="radio__mark"></span>
+                  <span class="radio__name">Выставка/показ</span>
+
+                </label>
+
+                <label class="radio__label">
+                  <input type="radio" name="format" value="other" class="radio__input" />
+                  <span class="radio__mark"></span>
+                  <span class="radio__name">Другое</span>
+
+                </label>
+              </div>
+            </div>
+            <div class="form__group">
+
+              <div class="form__field form__field--w30 field">
+                <h6 class="field__title">Планируемое количество посетителей:</h6>
+                <select name="amount" class="field__select ">
+                  <option value="20">до 20 человек</option>
+                  <option value="100">от 20 до 100 человек</option>
+                  <option value="500">от 100 до 500 человек</option>
+                  <option value="501">более 500 человек</option>
+                </select>
+
+              </div>
+
+              <div class="form__field field">
+                <h6 class="field__title">Дата проведения:</h6>
+                <div class="field__inputs">
+                  <input type="text" class="field__input field__input--w55 field__input--datetime" placeholder="ММ" />
+
+                  <input type="text" class="field__input field__input--w55 field__input--datetime" placeholder="ДД" />
+
+                  <input type="text" class="field__input field__input--w110 field__input--datetime" placeholder="ГГГГ" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form__section">
+            <h6 class="field__title">
+              Контактные данные:
+            </h6>
+            <div class="form__list form__list--mb50">
+              <label class="form__field form__field--w50 field">
+                <span class="field__label">
+                  Имя*
+                </span>
+                <input type="text" class="field__input" placeholder="Имя" name="name" required />
+              </label>
+
+              <label class="form__field form__field--w50 field">
+                <span class="field__label">
+                  Фамилия*
+                </span>
+                <input type="text" class="field__input" placeholder="Фамилия" name=" last name" required />
+              </label>
+
+              <label class="form__field form__field--w50 field">
+                <span class="field__label">
+                  Телефон*
+                </span>
+                <input type="text" class="field__input" placeholder="+7()____ __ __" name="phone" required />
+              </label>
+
+              <label class="form__field form__field--w50 field">
+                <span class="field__label">
+                  Email*
+                </span>
+                <input type="text" class="field__input" placeholder="Email" name="email" required />
+              </label>
+            </div>
+
+            <label class="form__field form__field--mb30 field">
+              <span class="field__label field__label--textarea">
+                Есть пожелания? Напишите нам:
+              </span>
+              <textarea class="field__textarea" name="wish">
+
+                        </textarea>
+            </label>
+
+
+            <label class="form__check form__check--mb40 check">
+              <input type="checkbox" class="check__input" required name="agree" />
+              <span class="check__mark"></span>
+              <span class="check__label">Я соглашаюсь с пользовательским соглашением и с политикой использования персональных данных</span>
+            </label>
+
+            <div class="form__btns">
+              <button type="submit" class="form__btn btn">
+                Отправить
+              </button>
+              <button type="button" class="form__close">Закрыть</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 
 </html>
