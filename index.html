@@ -59,10 +59,6 @@
         </p>
       </header>
 
-
-      <!-- prettier-ignore -->
-
-
       <div class="offers home__offers">
         <div class="offers__container">
           <h3 class="offers__text">Я ХОЧУ:</h3>
@@ -133,14 +129,91 @@
         </div>
       </section>
       <section class="upcoming home__upcoming"></section>
-      <section class="listing home__listing"></section>
+      <section class="listing home__listing">
+        <h2 class="listing__title section-title">Блог</h2>
+
+        <div class="listing__article-list">
+          <!-- prettier-ignore -->
+          <article class="article-card listing__article-card">
+            <a href="#" class="article-card__link">
+              <picture class="article-card__picture">
+                <img src="assets/images/theatre.png" alt="theatre photosession" class="article-card__img" />
+              </picture>
+            </a>
+
+            <div class="article-card__info">
+              <time datetime="2022-11-26T00:00" class="article-card__time">26.11.2022</time>
+
+              <a href="#" class="article-card__title-link">
+                <h4 class="article-card__title">Фотосессия в стенах Театра драмы</h4>
+
+                <div class="article-card__arrow arrow">
+                  <svg class="arrow__icon" width="92" height="62">
+                    <use xlink:href="assets/icons/symbols.svg#link"></use>
+                  </svg>
+                </div>
+              </a>
+
+              <p class="article-card__description">Организовывая фотосессию для локального бренда одежды мы смогли воплотить все пожелания заказчика и у нас получилась отличная работа. Смотрите как это было.</p>
+            </div>
+          </article>
+          <article class="article-card listing__article-card">
+            <a href="#" class="article-card__link">
+              <picture class="article-card__picture">
+                <img src="assets/images/VR.png" alt="vr" class="article-card__img" />
+              </picture>
+            </a>
+
+            <div class="article-card__info">
+              <time datetime="2022-11-05T00:00" class="article-card__time">05.11.2022</time>
+
+              <a href="#" class="article-card__title-link">
+                <h4 class="article-card__title">Выставка VR в Томске</h4>
+
+                <div class="article-card__arrow arrow">
+                  <svg class="arrow__icon" width="92" height="62">
+                    <use xlink:href="assets/icons/symbols.svg#link"></use>
+                  </svg>
+                </div>
+              </a>
+
+              <p class="article-card__description">Клуб виртуальной реальности - это другие миры. яркие эмоции. новый опыт. ... Мы предоставляем нашим клиентам лучший игровой VR-опыт в Томске.</p>
+            </div>
+          </article>
+          <article class="article-card listing__article-card">
+            <a href="#" class="article-card__link">
+              <picture class="article-card__picture">
+                <img src="assets/images/radio.png" alt="rocking radio" class="article-card__img" />
+              </picture>
+            </a>
+
+            <div class="article-card__info">
+              <time datetime="2022-11-01T00:00" class="article-card__time">01.11.2022</time>
+
+              <a href="#" class="article-card__title-link">
+                <h4 class="article-card__title">Rocking radio в заброшенном ангаре</h4>
+
+                <div class="article-card__arrow arrow">
+                  <svg class="arrow__icon" width="92" height="62">
+                    <use xlink:href="assets/icons/symbols.svg#link"></use>
+                  </svg>
+                </div>
+              </a>
+
+              <p class="article-card__description">15 электрогенераторов, километры проводов и пару тонн света. Все это для того, чтобы организовать лучшую вечеринку года для ребят из Новосибирска.</p>
+            </div>
+          </article>
+        </div>
+
+        <a href="#" class="listing__link link">Смотреть все</a>
+      </section>
       <section class="contacts home__contact home__contacts">
         <div class="contacts__container">
           <h2 class="contacts__title section-title">Контакты</h2>
           <div class="contacts__wrapper">
             <div class="contacts__items">
               <!-- иконка 1 -->
-              <div class="contacts__item">
+              <div class="contacts-item">
                 <div class="contacts-item__img">
                   <svg class="contacts-item__icon" width="24" height="24">
                     <use xlink:href="assets/icons/symbols.svg#location">
@@ -153,7 +226,7 @@
                 </div>
               </div>
               <!-- иконка 2 -->
-              <div class="contacts__item">
+              <div class="contacts-item">
                 <div class="contacts-item__img">
                   <svg class="contacts-item__icon" width="24" height="24">
                     <use xlink:href="assets/icons/symbols.svg#home">
@@ -166,7 +239,7 @@
                 </div>
               </div>
               <!-- иконка 3 -->
-              <div class="contacts__item">
+              <div class="contacts-item">
                 <div class="contacts-item__img">
                   <svg class="contacts-item__icon" width="24" height="24">
                     <use xlink:href="assets/icons/symbols.svg#star">
@@ -189,7 +262,19 @@
         </div>
       </section>
 
-      <div class="doit home__doit"></div>
+      <section class="doit home__doit home__doit">
+        <div class="doit__container">
+          <div class="doit__wrapper">
+            <svg class="doit__text1">
+              <use xlink:href="assets/icons/symbols.svg#simple">
+            </svg>
+            <svg class="doit__text2">
+              <use xlink:href="assets/icons/symbols.svg#a we">
+            </svg>
+          </div>
+        </div>
+
+      </section>
     </div>
   </main>
 
@@ -308,7 +393,7 @@
             </div>
             <div class="form__group">
 
-              <div class="form__field form__field--w30 field">
+              <div class="form__field form__field--mb30 field">
                 <h6 class="field__title">Планируемое количество посетителей:</h6>
                 <select name="amount" class="field__select ">
                   <option value="20">до 20 человек</option>
