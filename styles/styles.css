@@ -510,7 +510,7 @@ textarea {
   width: 0;
   height: 0;
   border-top: 40px solid rgba(255, 255, 255, 0.6);
-  border-left: 60vw solid transparent;
+  border-left: 40vw solid transparent;
 }
 .tringle {
   display: -webkit-box;
@@ -532,7 +532,6 @@ textarea {
 .bgc {
   max-width: 1920px;
   width: 100%;
-  height: 1236px;
   background-color: rgba(255, 255, 255, 0.6);
 }
 .upcoming {
@@ -555,6 +554,7 @@ textarea {
   padding-left: 40px;
   padding-right: 40px;
   margin-top: 128px;
+  margin-bottom: 44px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2183,6 +2183,7 @@ textarea {
 }
 .main-header__title {
   margin: 0 0 70px;
+  max-width: 1920px;
 }
 .main-header__text {
   margin: 0 auto;
