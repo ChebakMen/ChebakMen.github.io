@@ -346,6 +346,16 @@ textarea {
   line-height: 19;
   font-size: 14px;
 }
+
+.check__label-coock{
+  font-size: 14px;
+  margin-left: 0;
+  font-weight: 400;
+  line-height: normal; 
+}
+
+
+
 .check__label--red {
   color: #bc3324;
 }
