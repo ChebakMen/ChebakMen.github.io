@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
   <title>Lenni Art</title>
 
   <link rel="stylesheet" href="styles/styles.css?ver=0">
@@ -28,12 +28,26 @@
         <a href="#" class="page-header__nav-link">О нас</a>
         <a href="#" class="page-header__nav-link">Контакты</a>
 
-
+        <div class="page-header__nav-user">
+          <a href="#" class="page-header__nav-user-link">
+            Александр С.
+          </a>
+          <a href="#" class="page-header__nav-logout">
+            <svg class="page-header__nav-logout-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#door"></use>
+            </svg>
+          </a>
+        </div>
       </nav>
+
       <div class="page-header__right-block">
         <a href="#" class="btn page-header__user-btn">
           Войти
+          <svg class="page-header__user-icon" width="21" height="18">
+            <use xlink:href="assets/icons/symbols.svg#user"></use>
+          </svg>
         </a>
+        <button type="button" class="page-header__nav-toggle" id="js-navToggle"></button>
       </div>
     </div>
 
@@ -51,7 +65,7 @@
 
       <article class="event__container">
         <div class="event__header">
-          <h1 class="event__title">Вечер | The Best of Sade</h1>
+          <h1 class="event__title title">Вечер | The Best of Sade</h1>
           <div class="event__about">
             <div class="event__info">
               <time datetime="2024-12-16T20:00" class="event__time">16/12/2024</time>
@@ -64,7 +78,7 @@
                       type="image/webp"
                   
                     /> -->
-              <img src="assets/images/Sade497.png" alt="Вечер | The Best of Sade">
+              <img src="assets/images/sade497.png" alt="Вечер | The Best of Sade">
             </picture>
 
             <div class="event__info">
@@ -426,7 +440,7 @@
           </div>
           <label class="subscribe__check check">
             <input type="checkbox" class="check__input" name="agree" required />
-            <span class="check__mark"></span>
+            <span class="check__mark check__mark-footer"></span>
             <span class="check__label check__label-coock">Согласен на обработку персональных данных</span>
 
           </label>
@@ -435,8 +449,8 @@
       <div class="page-footer__bottom">
         <div class="page-footer__docs">
           <span class="page-footer__milenials">© Millennials 2022</span>
-          <span class="page-footer__confidence">Политика конфиденциальности</span>
-          <span class="page-footer__cookies">Cookies</span>
+          <a href="" class="page-footer__confidence">Политика конфиденциальности</a>
+          <a href="" class="page-footer__cookies">Cookies</a>
         </div>
 
 
@@ -456,10 +470,11 @@
 
         <div class="page-footer__docs2">
           <span class="page-footer__tagree">Создание и продвижение</span>
-          <svg class="page-footer__tagree-icon" width="56" height="17">
-            <use xlink:href="assets/icons/symbols.svg#tagree" />
-
-          </svg>
+          <a href="https://vk.com/maksimch1" class="page-footer__tagree-link">
+            <svg class="page-footer__tagree-icon" width="56" height="17">
+              <use xlink:href="assets/icons/symbols.svg#tagree" />
+            </svg>
+          </a>
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
   <title>Lenni Art</title>
 
   <link rel="stylesheet" href="styles/styles.css?ver=0">
@@ -28,12 +28,26 @@
         <a href="#" class="page-header__nav-link">О нас</a>
         <a href="#" class="page-header__nav-link">Контакты</a>
 
-
+        <div class="page-header__nav-user">
+          <a href="#" class="page-header__nav-user-link">
+            Александр С.
+          </a>
+          <a href="#" class="page-header__nav-logout">
+            <svg class="page-header__nav-logout-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#door"></use>
+            </svg>
+          </a>
+        </div>
       </nav>
+
       <div class="page-header__right-block">
         <a href="#" class="btn page-header__user-btn">
           Войти
+          <svg class="page-header__user-icon" width="21" height="18">
+            <use xlink:href="assets/icons/symbols.svg#user"></use>
+          </svg>
         </a>
+        <button type="button" class="page-header__nav-toggle" id="js-navToggle"></button>
       </div>
     </div>
 
@@ -54,7 +68,8 @@
         </picture>
 
         <p class="main-header__text">
-          для людей, горящих сердцем и делом <br>
+          для людей, горящих сердцем и делом
+          <br>
           место для настоящего
         </p>
       </header>
@@ -64,8 +79,8 @@
         <div class="offers__container">
           <h3 class="offers__text">Я ХОЧУ:</h3>
           <div class="offers__buttons">
-            <a href="#" class="offers__btn btn btn--red">Провести мероприятие</a>
-            <a href="#" class="offers__btn btn">Стать арендатором</a>
+            <button type="button" class="offers__btn btn btn--red" id="js-eventOpenBtn">Провести мероприятие</a>
+              <button type="button" class="offers__btn btn">Стать арендатором</a>
           </div>
         </div>
       </div>
@@ -117,8 +132,8 @@
                 Мы уже успешно организовали и провели более 100 проектов. Посмотрите, как это было классно.
               </p>
 
-              <a href="#" class="about__link link">
-                <span class="link__name">
+              <a href="#" class="about__link link ">
+                <span class=" link__name">
                   Смотреть
                 </span>
 
@@ -132,75 +147,131 @@
       </section>
       <!-- Мероприятия -->
       <section class="upcoming home__upcoming">
-        <div class="tringle tringle-top">
-          <div id="tringl-right-top"></div>
-          <div id="tringl-left-top"></div>
+        <div class="upcoming__tringle upcoming__tringle-top">
+          <div class="upcoming__tringl-right-top"></div>
+          <div class="upcoming__tringl-left-top"></div>
         </div>
-        <div class="bgc">
+        <div class="upcoming__bgc">
           <div class="upcoming__container">
             <h2 class="upcoming__title section-title">Мероприятия</h2>
-            <div class="upcoming__wrapper">
-              <div class="listing__events-list">
-                <article class="event-card  listing__event-card">
-                  <a href="event.html" class="event-card__link">
-                    <picture class="event-card__picture">
-                      <img src="assets/images/nirvana.png" alt="nirvana" class="event-card__img" />
-                    </picture>
-                    <h4 class="event-card__title">Собираемся и слушаем альбом Nirvana</h4>
-                    <p class="event-card__description">Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.</p>
-                    <time datetime="2022-12-07T18:00" class="event-card__time">07.12.2022 | начало 18.00</time>
-                  </a>
-                </article>
-                <article class="event-card  listing__event-card">
-                  <a href="event.html" class="event-card__link">
-                    <picture class="event-card__picture">
-                      <img src="assets/images/stuff.png" alt="stuff" class="event-card__img" />
-                    </picture>
-                    <h4 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h4>
-                    <p class="event-card__description">Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.</p>
-                    <time datetime="2022-12-14T18:30" class="event-card__time">14.12.2022 | начало 18.30</time>
-                  </a>
-                </article>
-                <article class="event-card  listing__event-card">
-                  <a href="event.html" class="event-card__link">
-                    <picture class="event-card__picture">
-                      <img src="assets/images/sade.png" alt="sade" class="event-card__img" />
-                    </picture>
-                    <h4 class="event-card__title">Вечер | The Best of Sade</h4>
-                    <p class="event-card__description">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.</p>
-                    <time datetime="2022-12-16T20:00" class="event-card__time">16.12.2022 | начало 20.00</time>
-                  </a>
-                </article>
-              </div>
-              <div class="upcoming__link">
-                <div class="upcoming__link-icons">
-                  <a href="#" class="about__link link">
-                    <svg class="link__icon " width="92" height="60">
-                      <use xlink:href="assets/icons/symbols.svg#link-left" />
-                    </svg>
-                  </a>
-                  <svg class="link__icon" width="99" height="2">
-                    <use xlink:href="assets/icons/symbols.svg#scrol" />
-                  </svg>
-                  <a href="#" class="about__link link">
-                    <svg class="link__icon" width="91" height="60">
-                      <use xlink:href="assets/icons/symbols.svg#link" />
-                    </svg>
-                  </a>
+
+            <div class="upcoming__wrapper  swiper swiper--3s js-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <!-- prettier-ignore -->
+                  <article class="event-card  ">
+                    <a href="event.html" class="event-card__link">
+                      <picture class="event-card__picture">
+                        <img src="assets/images/nirvana.png" alt="nirvana" class="event-card__img" />
+                      </picture>
+                      <h4 class="event-card__title">Собираемся и слушаем альбом Nirvana.</h4>
+                      <p class="event-card__description">Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.</p>
+                      <time datetime="2022-12-07T18:00" class="event-card__time">07.12.2022 | начало 18.00</time>
+                    </a>
+                  </article>
                 </div>
-                <a href="#" class="link__name link upcoming__link-btn">
-                  Смотреть все
-                </a>
+
+                <div class="swiper-slide">
+                  <!-- prettier-ignore -->
+                  <article class="event-card  ">
+                    <a href="event.html" class="event-card__link">
+                      <picture class="event-card__picture">
+                        <img src="assets/images/stuff.png" alt="stuff" class="event-card__img" />
+                      </picture>
+                      <h4 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h4>
+                      <p class="event-card__description">Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.</p>
+                      <time datetime="2022-12-14T18:30" class="event-card__time">14.12.2022 | начало 18.30</time>
+                    </a>
+                  </article>
+                </div>
+
+                <div class="swiper-slide">
+                  <!-- prettier-ignore -->
+                  <article class="event-card  ">
+                    <a href="event.html" class="event-card__link">
+                      <picture class="event-card__picture">
+                        <img src="assets/images/sade.png" alt="sade" class="event-card__img" />
+                      </picture>
+                      <h4 class="event-card__title">Вечер | The Best of Sade</h4>
+                      <p class="event-card__description">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.</p>
+                      <time datetime="2022-12-16T20:00" class="event-card__time">16.12.2022 | начало 20.00</time>
+                    </a>
+                  </article>
+                </div>
+
+                <div class="swiper-slide">
+                  <!-- prettier-ignore -->
+                  <article class="event-card  ">
+                    <a href="event.html" class="event-card__link">
+                      <picture class="event-card__picture">
+                        <img src="assets/images/Malevich.png" alt="malevich" class="event-card__img" />
+                      </picture>
+                      <h4 class="event-card__title">Выставка Малевича в Томске</h4>
+                      <p class="event-card__description">Это будет самая полная выставка с 1988 года, того времени, когда впервые заговорили о Малевиче. Экспозиция займёт два этажа павильона.</p>
+                      <time datetime="2022-12-23T20:00" class="event-card__time">23.12.2022 | начало 20.00</time>
+                    </a>
+                  </article>
+                </div>
+
+                <div class="swiper-slide">
+                  <!-- prettier-ignore -->
+                  <article class="event-card  ">
+                    <a href="event.html" class="event-card__link">
+                      <picture class="event-card__picture">
+                        <img src="assets/images/Tatler.png" alt="tatler" class="event-card__img" />
+                      </picture>
+                      <h4 class="event-card__title">Мастер — класс по студийной съемке от Tatler</h4>
+                      <p class="event-card__description">Фотографы издания расскажут, как им удается создавать потрясающие кадры и что может испортить весь процесс.</p>
+                      <time datetime="2022-12-25T13:00" class="event-card__time">25.12.2022 | начало 13.00</time>
+                    </a>
+                  </article>
+                </div>
+
+                <div class="swiper-slide">
+                  <!-- prettier-ignore -->
+                  <article class="event-card  ">
+                    <a href="event.html" class="event-card__link">
+                      <picture class="event-card__picture">
+                        <img src="assets/images/hatters.png" alt="the_hatters" class="event-card__img" />
+                      </picture>
+                      <h4 class="event-card__title">Повесилимся на славу на концерте The Hatters</h4>
+                      <p class="event-card__description">Российская джипси-фолк-рок группа, основанная в 2016 году в Санкт-Петербурге. В основной состав группы входят Юрий Музыченко.</p>
+                      <time datetime="2022-12-27T10:00" class="event-card__time">27.12.2022 | начало 10.00</time>
+                    </a>
+                  </article>
+                </div>
               </div>
 
+
+              <footer class="swiper-footer">
+                <button type="button" class="swiper-arrow-prev link__reverse upcoming__arrow link">
+                  <svg class="arrow__icon" width="92" height="62">
+                    <use xlink:href="assets/icons/symbols.svg#link-left"></use>
+                  </svg>
+                </button>
+
+                <div class="swiper-pagination"></div>
+
+                <button type="button" class="swiper-arrow-next upcoming__arrow link link--disabled">
+                  <svg class="arrow__icon" width="92" height="62">
+                    <use xlink:href="assets/icons/symbols.svg#link"></use>
+                  </svg>
+                </button>
+              </footer>
             </div>
+            <div class="upcoming__container-link">
+              <a href="#" class="upcoming__link upcoming__link-btn link">Смотреть все</a>
+            </div>
+
           </div>
         </div>
-        <div class="tringle tringle-button">
-          <div id="tringl-right-button"></div>
-          <div id="tringl-left-button"></div>
+        <div class="upcoming__tringle tringle-button">
+          <div class="upcoming__tringl-right-button"></div>
+          <div class="upcoming__tringl-left-button"></div>
         </div>
       </section>
+
+
       <!-- Блог -->
       <section class="listing home__listing">
         <h2 class="listing__title section-title">Блог</h2>
@@ -210,7 +281,12 @@
           <article class="article-card listing__article-card">
             <a href="#" class="article-card__link">
               <picture class="article-card__picture">
-                <img src="assets/images/theatre.png" alt="theatre photosession" class="article-card__img" />
+                <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/blog/webp/theatre.webp" />
+                <source media="(max-width: 450px)" srcset="assets/images//blog/theatre.png" />
+                <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/blog/theatre_tablet.webp" />
+                <source media="(max-width: 1169px)" srcset="assets/images/blog/theatre_tablet.jpg" />
+                <source type="image/webp" srcset="assets/images/blog/webp/theatre.webp" />
+                <img src="assets/images//blog/theatre.png" alt="theatre photosession" class="article-card__img" />
               </picture>
             </a>
 
@@ -233,7 +309,12 @@
           <article class="article-card listing__article-card">
             <a href="#" class="article-card__link">
               <picture class="article-card__picture">
-                <img src="assets/images/VR.png" alt="vr" class="article-card__img" />
+                <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/blog/webp/VR.webp" />
+                <source media="(max-width: 450px)" srcset="assets/images//blog/VR.png" />
+                <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/blog/VR_tablet.webp" />
+                <source media="(max-width: 1169px)" srcset="assets/images/blog/VR_tablet.jpg" />
+                <source type="image/webp" srcset="assets/images/blog/webp/VR.webp" />
+                <img src="assets/images//blog/VR.png" alt="vr" class="article-card__img" />
               </picture>
             </a>
 
@@ -256,7 +337,12 @@
           <article class="article-card listing__article-card">
             <a href="#" class="article-card__link">
               <picture class="article-card__picture">
-                <img src="assets/images/radio.png" alt="rocking radio" class="article-card__img" />
+                <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/blog/webp/radio.webp" />
+                <source media="(max-width: 450px)" srcset="assets/images/blog/rasdio.png" />
+                <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/blog/radio_tablet.webp" />
+                <source media="(max-width: 1169px)" srcset="assets/images/blog/radio_tablet.jpg" />
+                <source type="image/webp" srcset="assets/images/blog/webp/radio.webp" />
+                <img src="assets/images/blog/rasdio.png" alt="rocking radio" class="article-card__img" />
               </picture>
             </a>
 
@@ -287,7 +373,7 @@
           <div class="contacts__wrapper">
             <div class="contacts__items">
               <!-- иконка 1 -->
-              <div class="contacts-item">
+              <div class="contacts-item contacts__item">
                 <div class="contacts-item__img">
                   <svg class="contacts-item__icon" width="24" height="24">
                     <use xlink:href="assets/icons/symbols.svg#location" />
@@ -301,7 +387,7 @@
                 </div>
               </div>
               <!-- иконка 2 -->
-              <div class="contacts-item">
+              <div class="contacts-item contacts__item">
                 <div class="contacts-item__img">
                   <svg class="contacts-item__icon" width="24" height="24">
                     <use xlink:href="assets/icons/symbols.svg#home" />
@@ -314,7 +400,7 @@
                 </div>
               </div>
               <!-- иконка 3 -->
-              <div class="contacts-item">
+              <div class="contacts-item contacts__item">
                 <div class="contacts-item__img">
                   <svg class="contacts-item__icon" width="24" height="24">
                     <use xlink:href="assets/icons/symbols.svg#star" />
@@ -328,9 +414,8 @@
               </div>
             </div>
             <!-- карта -->
-            <div class="contacts__map">
-              <img src="assets/images/map.jpg" alt="map" />
-            </div>
+
+            <div class="contacts__map" id="js-contactsMap"></div>
           </div>
 
 
@@ -390,7 +475,7 @@
           </div>
           <label class="subscribe__check check">
             <input type="checkbox" class="check__input" name="agree" required />
-            <span class="check__mark"></span>
+            <span class="check__mark check__mark-footer"></span>
             <span class="check__label check__label-coock">Согласен на обработку персональных данных</span>
 
           </label>
@@ -399,8 +484,8 @@
       <div class="page-footer__bottom">
         <div class="page-footer__docs">
           <span class="page-footer__milenials">© Millennials 2022</span>
-          <span class="page-footer__confidence">Политика конфиденциальности</span>
-          <span class="page-footer__cookies">Cookies</span>
+          <a href="" class="page-footer__confidence">Политика конфиденциальности</a>
+          <a href="" class="page-footer__cookies">Cookies</a>
         </div>
 
 
@@ -420,19 +505,20 @@
 
         <div class="page-footer__docs2">
           <span class="page-footer__tagree">Создание и продвижение</span>
-          <svg class="page-footer__tagree-icon" width="56" height="17">
-            <use xlink:href="assets/icons/symbols.svg#tagree" />
-
-          </svg>
+          <a href="https://vk.com/maksimch1" class="page-footer__tagree-link">
+            <svg class="page-footer__tagree-icon" width="56" height="17">
+              <use xlink:href="assets/icons/symbols.svg#tagree" />
+            </svg>
+          </a>
         </div>
       </div>
     </div>
   </footer>
 
-  <div class="pp">
+  <div class="pp" id="js-eventPP">
     <div class="pp__container">
       <div class="pp__sticky-close">
-        <button type="button" class="pp__sticky-btn">
+        <button type="button" class="pp__sticky-btn js-ppCloseBtn">
           <svg class="pp__btn-icon" width="24" height="24">
             <use xlink:href="assets/icons/symbols.svg#x"></use>
           </svg>
@@ -505,7 +591,7 @@
             </div>
           </div>
           <div class="form__section">
-            <h6 class="field__title">
+            <h6 class="field__title field__title--ml">
               Контактные данные:
             </h6>
             <div class="form__list form__list--mb50">
@@ -527,7 +613,7 @@
                 <span class="field__label">
                   Телефон*
                 </span>
-                <input type="text" class="field__input" placeholder="+7()____ __ __" name="phone" required />
+                <input type="text" class="field__input" placeholder="+7 ( ) ____ __ __" name="phone" required />
               </label>
 
               <label class="form__field form__field--w50 field">
@@ -538,7 +624,7 @@
               </label>
             </div>
 
-            <label class="form__field form__field--mb30 field">
+            <label class="form__field form__field--mb30 field ">
               <span class="field__label field__label--textarea">
                 Есть пожелания? Напишите нам:
               </span>
@@ -551,14 +637,14 @@
             <label class="form__check form__check--mb40 check">
               <input type="checkbox" class="check__input" required name="agree" />
               <span class="check__mark"></span>
-              <span class="check__label check__label--s">Я соглашаюсь с пользовательским соглашением и с политикой использования персональных данных</span>
+              <p class="check__label check__label--s">Я соглашаюсь с пользовательским соглашением и с политикой использования персональных данных</p>
             </label>
 
             <div class="form__btns">
               <button type="submit" class="form__btn btn">
                 Отправить
               </button>
-              <button type="button" class="form__close">Закрыть</button>
+              <button type="button" class="form__close js-ppCloseBtn">Закрыть</button>
             </div>
 
           </div>
@@ -566,6 +652,11 @@
       </div>
     </div>
   </div>
+
+
+  <script src="scripts/swiper.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAELqrLiMyWfM_wwckJndQzmO9XEzvw_SU&callback=soGoogleMapInitialize"></script>
+  <script src="scripts/main.min.js"></script>
 
 </body>
 
